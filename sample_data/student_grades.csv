@@ -1,0 +1,13 @@
+﻿student_id,gender,major,study_hours_weekly,attendance_percentage,midterm_score,final_exam_score,passed
+S101,Female,Computer Science,15,92.5,88,94,True
+S102,Male,Engineering,10,85.0,72,78,True
+S103,Female,Business,6,75.0,60,65,True
+S104,Male,Computer Science,4,62.0,45,48,False
+S105,Female,Mathematics,18,98.0,95,99,True
+S106,Male,Engineering,12,88.5,82,85,True
+S107,Male,Business,8,70.0,55,58,False
+S108,Female,Computer Science,14,90.0,85,91,True
+S109,Male,Mathematics,16,94.0,90,92,True
+S110,Female,Engineering,7,80.0,68,70,True
+S111,Female,Business,11,86.0,76,82,True
+S112,Male,Computer Science,5,58.0,42,44,False

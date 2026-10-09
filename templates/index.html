@@ -1,0 +1,85 @@
+﻿{% extends 'base.html' %}
+{% block title %}Data Analysis Dashboard - Home{% endblock %}
+{% block page_header %}Welcome to DataPulse Analytics Engine{% endblock %}
+
+{% block content %}
+<div class="row g-4 mb-5">
+    <div class="col-lg-8">
+        <div class="dashboard-card p-4 bg-primary text-white" style="background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);">
+            <h2 class="fw-bold mb-2">Automated Machine Learning & Analytics</h2>
+            <p class="text-white-50 mb-4 fs-5">Upload any CSV, Excel, or JSON file to instantly unlock descriptive stats, outlier detection, correlation heatmaps, PCA, and dynamic Plotly charts.</p>
+            <div class="d-flex gap-2">
+                <a href="/datasets/upload/" class="btn btn-light text-primary fw-semibold px-4">
+                    <i class="bi bi-upload me-1"></i> Upload Dataset
+                </a>
+                <a href="/dashboard/" class="btn btn-outline-light px-4">
+                    <i class="bi bi-grid me-1"></i> Open Dashboard
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="dashboard-card p-4 h-100 d-flex flex-column justify-content-between">
+            <div>
+                <h5 class="fw-bold mb-3"><i class="bi bi-lightning-charge-fill text-warning me-2"></i>Key Features</h5>
+                <ul class="list-unstyled text-muted small mb-0">
+                    <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i>Pandas & SciPy Statistical Profiling</li>
+                    <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i>Interactive Plotly & Seaborn Charts</li>
+                    <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i>K-Means Clustering & Linear Regression</li>
+                    <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i>Outliers Detection via IQR & Z-Score</li>
+                    <li><i class="bi bi-check2-circle text-success me-2"></i>Full RESTful API with JWT Auth</li>
+                </ul>
+            </div>
+            <a href="/api/v1/" target="_blank" class="btn btn-outline-primary btn-sm mt-3">Explore API Endpoints</a>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4">
+    <div class="col-md-4">
+        <div class="dashboard-card p-4">
+            <div class="d-flex align-items-center mb-3">
+                <div class="stat-icon bg-primary bg-opacity-10 text-primary me-3">
+                    <i class="bi bi-file-earmark-spreadsheet"></i>
+                </div>
+                <div>
+                    <h6 class="text-muted mb-0">Datasets</h6>
+                    <h4 class="fw-bold mb-0">Ready for Analysis</h4>
+                </div>
+            </div>
+            <p class="text-muted small">Manage files, preview rows, detect data types, and clean missing values.</p>
+            <a href="/datasets/" class="btn btn-sm btn-outline-primary w-100">View Datasets</a>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="dashboard-card p-4">
+            <div class="d-flex align-items-center mb-3">
+                <div class="stat-icon bg-success bg-opacity-10 text-success me-3">
+                    <i class="bi bi-calculator"></i>
+                </div>
+                <div>
+                    <h6 class="text-muted mb-0">Engine</h6>
+                    <h4 class="fw-bold mb-0">Statistical Analytics</h4>
+                </div>
+            </div>
+            <p class="text-muted small">Execute correlation matrix, regression, PCA, and automated insight generation.</p>
+            <a href="/dashboard/" class="btn btn-sm btn-outline-success w-100">Run Analysis</a>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="dashboard-card p-4">
+            <div class="d-flex align-items-center mb-3">
+                <div class="stat-icon bg-warning bg-opacity-10 text-warning me-3">
+                    <i class="bi bi-graph-up-arrow"></i>
+                </div>
+                <div>
+                    <h6 class="text-muted mb-0">Visuals</h6>
+                    <h4 class="fw-bold mb-0">Plotly & Seaborn</h4>
+                </div>
+            </div>
+            <p class="text-muted small">Generate interactive scatter, bar, box, heatmap, and violin plots with high-res export.</p>
+            <a href="/charts/" class="btn btn-sm btn-outline-warning w-100">View Visualizations</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

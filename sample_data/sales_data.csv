@@ -1,0 +1,16 @@
+﻿order_id,product_category,customer_segment,units_sold,unit_price,revenue,discount,profit,region,order_date
+1001,Electronics,Consumer,5,250.00,1250.00,0.05,312.50,North,2026-01-15
+1002,Furniture,Corporate,2,450.00,900.00,0.10,180.00,West,2026-01-16
+1003,Office Supplies,Home Office,15,12.50,187.50,0.00,56.25,East,2026-01-17
+1004,Electronics,Corporate,8,320.00,2560.00,0.15,640.00,South,2026-01-18
+1005,Technology,Consumer,3,800.00,2400.00,0.00,720.00,North,2026-01-19
+1006,Furniture,Consumer,1,650.00,650.00,0.05,130.00,East,2026-01-20
+1007,Office Supplies,Corporate,25,8.00,200.00,0.00,60.00,West,2026-01-21
+1008,Technology,Home Office,4,450.00,1800.00,0.10,450.00,South,2026-01-22
+1009,Electronics,Consumer,6,150.00,900.00,0.05,225.00,North,2026-01-23
+1010,Furniture,Corporate,3,300.00,900.00,0.00,225.00,West,2026-01-24
+1011,Technology,Consumer,2,1200.00,2400.00,0.10,600.00,East,2026-01-25
+1012,Office Supplies,Consumer,50,4.50,225.00,0.05,45.00,North,2026-01-26
+1013,Electronics,Corporate,10,210.00,2100.00,0.12,504.00,South,2026-01-27
+1014,Furniture,Home Office,2,550.00,1100.00,0.00,275.00,East,2026-01-28
+1015,Technology,Corporate,5,950.00,4750.00,0.20,950.00,North,2026-01-29

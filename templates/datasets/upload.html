@@ -1,0 +1,38 @@
+﻿{% extends 'base.html' %}
+{% block title %}Upload Dataset{% endblock %}
+{% block page_header %}Upload New Dataset{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="dashboard-card p-4">
+            <h5 class="fw-bold mb-3"><i class="bi bi-cloud-arrow-up text-primary me-2"></i>File Upload & Profiler</h5>
+            <p class="text-muted small">Supported formats: <strong>CSV, Excel (.xlsx, .xls), JSON, Parquet</strong> (up to 50 MB).</p>
+            
+            <form action="/api/v1/datasets/" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Dataset Name (Optional)</label>
+                    <input type="text" name="name" class="form-control" placeholder="e.g. Q1 Marketing Campaign Data">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Description</label>
+                    <textarea name="description" class="form-control" rows="3" placeholder="Brief summary of what this dataset contains..."></textarea>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Tags (Comma-separated)</label>
+                    <input type="text" name="tags" class="form-control" placeholder="sales, marketing, 2026">
+                </div>
+                <div class="mb-4">
+                    <label class="form-label fw-semibold">Choose File <span class="text-danger">*</span></label>
+                    <input type="file" name="file" class="form-control" required accept=".csv,.xlsx,.xls,.json,.parquet">
+                </div>
+                <button type="submit" class="btn btn-primary px-4">
+                    <i class="bi bi-upload me-1"></i> Upload & Auto-Profile
+                </button>
+                <a href="/datasets/" class="btn btn-outline-secondary ms-2">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,49 @@
+﻿{% extends 'base.html' %}
+{% block title %}Visualizations & Charts{% endblock %}
+{% block page_header %}Generated Visualizations{% endblock %}
+
+{% block content %}
+<div class="row g-4 mb-4">
+    <div class="col-md-6">
+        <div class="dashboard-card p-4">
+            <h5 class="fw-bold mb-2">Revenue by Product Category</h5>
+            <p class="small text-muted mb-3">Interactive bar chart categorized by customer segments.</p>
+            <div id="chart-cat-rev" style="height: 320px;"></div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="dashboard-card p-4">
+            <h5 class="fw-bold mb-2">Profit vs Revenue Scatter Plot</h5>
+            <p class="small text-muted mb-3">Correlation analysis with bubble size reflecting units sold.</p>
+            <div id="chart-profit-scatter" style="height: 320px;"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var barData = [{
+        x: ['Electronics', 'Furniture', 'Office Supplies', 'Technology'],
+        y: [6810, 3550, 612, 11350],
+        type: 'bar',
+        marker: { color: '#4f46e5' }
+    }];
+    Plotly.newPlot('chart-cat-rev', barData, {margin: {l: 40, r: 20, t: 20, b: 40}});
+
+    var scatterData = [{
+        x: [1250, 900, 187.5, 2560, 2400, 650, 200, 1800, 900, 900, 2400, 225, 2100, 1100, 4750],
+        y: [312.5, 180, 56.25, 640, 720, 130, 60, 450, 225, 225, 600, 45, 504, 275, 950],
+        mode: 'markers',
+        type: 'scatter',
+        marker: { size: 12, color: '#10b981' }
+    }];
+    Plotly.newPlot('chart-profit-scatter', scatterData, {
+        xaxis: { title: 'Revenue ($)' },
+        yaxis: { title: 'Profit ($)' },
+        margin: {l: 50, r: 20, t: 20, b: 50}
+    });
+});
+</script>
+{% endblock %}
