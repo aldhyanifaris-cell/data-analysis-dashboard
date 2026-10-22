@@ -86,6 +86,7 @@ Open your browser at: **http://127.0.0.1:8000/**
 - **Django Admin:** [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
   - Email: `admin@admin.com`
   - Password: `Admin1234!`
+> ⚠️ Demo credentials created by the seed command. For local development only; never use them in production.
 - **REST API Explorer:** [http://127.0.0.1:8000/api/v1/](http://127.0.0.1:8000/api/v1/)
 
 ---
